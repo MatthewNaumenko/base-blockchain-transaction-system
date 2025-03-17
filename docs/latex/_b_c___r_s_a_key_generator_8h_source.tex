@@ -1,0 +1,25 @@
+\doxysection{BC\+\_\+\+RSAKey\+Generator.\+h}
+\hypertarget{_b_c___r_s_a_key_generator_8h_source}{}\label{_b_c___r_s_a_key_generator_8h_source}\index{include/BC\_RSAKeyGenerator.h@{include/BC\_RSAKeyGenerator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ BC\_RSAKeyGenerator.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Системные\ библиотеки}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ OpenSSL\ компоненты}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <openssl/evp.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_r_s_a_key_generator}{RSAKeyGenerator}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ EVP\_PKEY\ *\mbox{\hyperlink{class_r_s_a_key_generator_aa1e264572af92fbc6289c08de06777d1}{generateRSAKeyPair}}(\textcolor{keywordtype}{int}\ keyLength\ =\ 2048);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_r_s_a_key_generator_aaa205518405821e287ca11ceb553f778}{getPEMFromPrivateKey}}(EVP\_PKEY\ *pkey);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_r_s_a_key_generator_a61baefc966d36403d276430296041cb0}{getPEMFromPublicKey}}(EVP\_PKEY\ *pkey);}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

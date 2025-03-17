@@ -1,0 +1,119 @@
+\doxysection{Класс Blockchain\+Controller}
+\hypertarget{class_blockchain_controller}{}\label{class_blockchain_controller}\index{BlockchainController@{BlockchainController}}
+
+
+Класс-\/посредник для управления блокчейном.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Controller.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_blockchain_controller_a8a3ee20378f9f17fd906155bfdc8e750}{Blockchain\+Controller}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&pub\+Keys)
+\item 
+void \mbox{\hyperlink{class_blockchain_controller_a8bbe608625d0d2ef9007469c8f9b9a36}{process\+Transactions}} (std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ transactions)
+\item 
+bool \mbox{\hyperlink{class_blockchain_controller_a930c5cb3de01376b9dd82049217f7f50}{is\+Blockchain\+Valid}} () const
+\item 
+void \mbox{\hyperlink{class_blockchain_controller_a9dc1effe2852cf2fc19f7f0a1225f270}{print\+Blockchain}} () const
+\item 
+void \mbox{\hyperlink{class_blockchain_controller_aff3b24b67779308aa5ece577b6921614}{save\+Blockchain}} (const std\+::string \&filename, const std\+::string \&key)
+\item 
+void \mbox{\hyperlink{class_blockchain_controller_a1e8ba4042faecdf37c1984e203d3a29c}{register\+User}} (const std\+::string \&username)
+\item 
+double \mbox{\hyperlink{class_blockchain_controller_ac9eccae966d86ddfa89f9656f9054132}{get\+User\+Balance}} (const std\+::string \&username) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс-\/посредник для управления блокчейном. 
+
+Класс-\/посредник \doxylink{class_blockchain_controller}{Blockchain\+Controller} управляет блокчейном и предоставляет методы для обработки транзакций, проверки валидности блокчейна, регистрации пользователей и работы с балансами. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_blockchain_controller_a8a3ee20378f9f17fd906155bfdc8e750}\index{BlockchainController@{BlockchainController}!BlockchainController@{BlockchainController}}
+\index{BlockchainController@{BlockchainController}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{BlockchainController()}{BlockchainController()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_a8a3ee20378f9f17fd906155bfdc8e750} 
+Blockchain\+Controller\+::\+Blockchain\+Controller (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{pub\+Keys}{}\end{DoxyParamCaption})}
+
+Конструктор класса \doxylink{class_blockchain_controller}{Blockchain\+Controller}. 
+\begin{DoxyParams}{Аргументы}
+{\em pub\+Keys} & Карта публичных ключей пользователей. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_blockchain_controller_ac9eccae966d86ddfa89f9656f9054132}\index{BlockchainController@{BlockchainController}!getUserBalance@{getUserBalance}}
+\index{getUserBalance@{getUserBalance}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{getUserBalance()}{getUserBalance()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_ac9eccae966d86ddfa89f9656f9054132} 
+double Blockchain\+Controller\+::get\+User\+Balance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{}\end{DoxyParamCaption}) const}
+
+Возвращает баланс пользователя по его имени. 
+\begin{DoxyParams}{Аргументы}
+{\em username} & Имя пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Баланс пользователя. 
+\end{DoxyReturn}
+\Hypertarget{class_blockchain_controller_a930c5cb3de01376b9dd82049217f7f50}\index{BlockchainController@{BlockchainController}!isBlockchainValid@{isBlockchainValid}}
+\index{isBlockchainValid@{isBlockchainValid}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{isBlockchainValid()}{isBlockchainValid()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_a930c5cb3de01376b9dd82049217f7f50} 
+bool Blockchain\+Controller\+::is\+Blockchain\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Проверяет валидность блокчейна. \begin{DoxyReturn}{Возвращает}
+true, если блокчейн валиден, иначе false. 
+\end{DoxyReturn}
+\Hypertarget{class_blockchain_controller_a9dc1effe2852cf2fc19f7f0a1225f270}\index{BlockchainController@{BlockchainController}!printBlockchain@{printBlockchain}}
+\index{printBlockchain@{printBlockchain}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{printBlockchain()}{printBlockchain()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_a9dc1effe2852cf2fc19f7f0a1225f270} 
+void Blockchain\+Controller\+::print\+Blockchain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Выводит блокчейн в консоль и отрисовывает его структуру. \Hypertarget{class_blockchain_controller_a8bbe608625d0d2ef9007469c8f9b9a36}\index{BlockchainController@{BlockchainController}!processTransactions@{processTransactions}}
+\index{processTransactions@{processTransactions}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{processTransactions()}{processTransactions()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_a8bbe608625d0d2ef9007469c8f9b9a36} 
+void Blockchain\+Controller\+::process\+Transactions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$}]{transactions}{}\end{DoxyParamCaption})}
+
+Обрабатывает список транзакций\+: подписывает их и добавляет в новый блок. 
+\begin{DoxyParams}{Аргументы}
+{\em transactions} & Список транзакций для обработки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_blockchain_controller_a1e8ba4042faecdf37c1984e203d3a29c}\index{BlockchainController@{BlockchainController}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_a1e8ba4042faecdf37c1984e203d3a29c} 
+void Blockchain\+Controller\+::register\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{}\end{DoxyParamCaption})}
+
+Регистрирует нового пользователя в блокчейне. 
+\begin{DoxyParams}{Аргументы}
+{\em username} & Имя пользователя для регистрации. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_blockchain_controller_aff3b24b67779308aa5ece577b6921614}\index{BlockchainController@{BlockchainController}!saveBlockchain@{saveBlockchain}}
+\index{saveBlockchain@{saveBlockchain}!BlockchainController@{BlockchainController}}
+\doxysubsubsection{\texorpdfstring{saveBlockchain()}{saveBlockchain()}}
+{\footnotesize\ttfamily \label{class_blockchain_controller_aff3b24b67779308aa5ece577b6921614} 
+void Blockchain\+Controller\+::save\+Blockchain (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption})}
+
+Сохраняет блокчейн в файл через save\+Blockchain\+To\+File. 
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Имя файла для сохранения. \\
+\hline
+{\em key} & Ключ для шифрования данных. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Controller.\+h\end{DoxyCompactItemize}

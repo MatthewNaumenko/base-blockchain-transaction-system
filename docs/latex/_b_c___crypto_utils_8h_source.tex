@@ -1,0 +1,25 @@
+\doxysection{BC\+\_\+\+Crypto\+Utils.\+h}
+\hypertarget{_b_c___crypto_utils_8h_source}{}\label{_b_c___crypto_utils_8h_source}\index{include/BC\_CryptoUtils.h@{include/BC\_CryptoUtils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ BC\_CryptoUtils.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Системные\ библиотеки}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_crypto_utils}{CryptoUtils}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_crypto_utils_af4104f671377661637287fe98a1a65c6}{calculateHash}}(\textcolor{keyword}{const}\ std::string\ \&input);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_crypto_utils_a446bb31d7cfb027c3997631368462f0f}{signData}}(\textcolor{keyword}{const}\ std::string\ \&data,\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&privateKeyPEM);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_crypto_utils_a8f32567f81b901a0d0ec6e21c0ab2ddd}{verifySignature}}(\textcolor{keyword}{const}\ std::string\&\ data,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ signatureHex,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ publicKeyPEM);}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

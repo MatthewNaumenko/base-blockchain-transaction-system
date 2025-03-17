@@ -1,0 +1,30 @@
+\doxysection{BC\+\_\+\+Key\+Manager.\+h}
+\hypertarget{_b_c___key_manager_8h_source}{}\label{_b_c___key_manager_8h_source}\index{include/BC\_KeyManager.h@{include/BC\_KeyManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ BC\_KeyManager.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Системные\ библиотеки}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_key_manager_a868028762a30f90b5702f0f4efb35d5c}{KeyManager}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ std::map<std::string,\ std::string>\ publicKeys;\ \ }
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ generateAndSaveKeys(\textcolor{keyword}{const}\ std::string\ \&username);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_key_manager_a868028762a30f90b5702f0f4efb35d5c}{KeyManager}}(\textcolor{keyword}{const}\ std::vector<std::string>\ \&users);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_manager_ac6740da790b0f50f419d3b5217a8192b}{addUserKeys}}(\textcolor{keyword}{const}\ std::string\ \&username);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::map<std::string,\ std::string>\ \&\mbox{\hyperlink{class_key_manager_ab35df9bb6514da5b4854fe43657c5b25}{getPublicKeys}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \mbox{\hyperlink{class_key_manager_ab4d52abf06c3f3eb0e42fb5ae812153e}{truncateKey}}(\textcolor{keyword}{const}\ std::string\ \&key,\ \textcolor{keywordtype}{int}\ headLen\ =\ 150,\ \textcolor{keywordtype}{int}\ tailLen\ =\ 150);}
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

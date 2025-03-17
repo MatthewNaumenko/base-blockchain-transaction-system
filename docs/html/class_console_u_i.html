@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>base-blockchain-transaction-system: Класс ConsoleUI</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">base-blockchain-transaction-system
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_console_u_i.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_console_u_i-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ConsoleUI</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для работы с консольным интерфейсом системы  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_b_c___utilities_8h_source.html">BC_Utilities.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a515db1dcf6506fe139515c28c5a87eef" id="r_a515db1dcf6506fe139515c28c5a87eef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515db1dcf6506fe139515c28c5a87eef">printBanner</a> ()</td></tr>
+<tr class="memdesc:a515db1dcf6506fe139515c28c5a87eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит главный баннер системы  <br /></td></tr>
+<tr class="separator:a515db1dcf6506fe139515c28c5a87eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8d23b588f011c796d115b02a119119" id="r_a9c8d23b588f011c796d115b02a119119"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c8d23b588f011c796d115b02a119119">printHeader</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a9c8d23b588f011c796d115b02a119119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит заголовок раздела с цветовым оформлением  <br /></td></tr>
+<tr class="separator:a9c8d23b588f011c796d115b02a119119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32eda42b8d1783c82d772f1880a02cb5" id="r_a32eda42b8d1783c82d772f1880a02cb5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32eda42b8d1783c82d772f1880a02cb5">printSectionHeader</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a32eda42b8d1783c82d772f1880a02cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит подзаголовок секции  <br /></td></tr>
+<tr class="separator:a32eda42b8d1783c82d772f1880a02cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34aa561bb134518d1d919778118cc132" id="r_a34aa561bb134518d1d919778118cc132"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34aa561bb134518d1d919778118cc132">printDefault</a> (const std::string &amp;title, bool newLine=true)</td></tr>
+<tr class="memdesc:a34aa561bb134518d1d919778118cc132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит стандартное сообщение  <br /></td></tr>
+<tr class="separator:a34aa561bb134518d1d919778118cc132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aea242346968ea28a95d22575202906" id="r_a9aea242346968ea28a95d22575202906"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aea242346968ea28a95d22575202906">printMining</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a9aea242346968ea28a95d22575202906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит сообщение о процессе майнинга  <br /></td></tr>
+<tr class="separator:a9aea242346968ea28a95d22575202906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad009f475f0a7103d4e3f1721dddcba71" id="r_ad009f475f0a7103d4e3f1721dddcba71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad009f475f0a7103d4e3f1721dddcba71">printSuccess</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:ad009f475f0a7103d4e3f1721dddcba71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит сообщение об успешной операции  <br /></td></tr>
+<tr class="separator:ad009f475f0a7103d4e3f1721dddcba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988af88a58ef9103c08c78729e5ecf7f" id="r_a988af88a58ef9103c08c78729e5ecf7f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a988af88a58ef9103c08c78729e5ecf7f">printError</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a988af88a58ef9103c08c78729e5ecf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит сообщение об ошибке  <br /></td></tr>
+<tr class="separator:a988af88a58ef9103c08c78729e5ecf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73be4efc6ab5df285a52beb8c7f15785" id="r_a73be4efc6ab5df285a52beb8c7f15785"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73be4efc6ab5df285a52beb8c7f15785">printWarning</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a73be4efc6ab5df285a52beb8c7f15785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит предупреждение  <br /></td></tr>
+<tr class="separator:a73be4efc6ab5df285a52beb8c7f15785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144c4d735ef468fdeb6bc6715c022f8b" id="r_a144c4d735ef468fdeb6bc6715c022f8b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a144c4d735ef468fdeb6bc6715c022f8b">printInfo</a> (const std::string &amp;message, bool newLine=true)</td></tr>
+<tr class="memdesc:a144c4d735ef468fdeb6bc6715c022f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит информационное сообщение  <br /></td></tr>
+<tr class="separator:a144c4d735ef468fdeb6bc6715c022f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d159da55e795e658f13599deac2ee2" id="r_ad8d159da55e795e658f13599deac2ee2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8d159da55e795e658f13599deac2ee2">printDivider</a> (char symbol='-', int length=60)</td></tr>
+<tr class="memdesc:ad8d159da55e795e658f13599deac2ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисует горизонтальный разделитель  <br /></td></tr>
+<tr class="separator:ad8d159da55e795e658f13599deac2ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898e68c84983224f87bbeea32290f84d" id="r_a898e68c84983224f87bbeea32290f84d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a898e68c84983224f87bbeea32290f84d">printMenuOptions</a> (const std::vector&lt; std::string &gt; &amp;options)</td></tr>
+<tr class="memdesc:a898e68c84983224f87bbeea32290f84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит пункты меню  <br /></td></tr>
+<tr class="separator:a898e68c84983224f87bbeea32290f84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для работы с консольным интерфейсом системы </p>
+<p>Предоставляет методы для форматированного вывода информации:</p><ul>
+<li>Заголовки и баннеры</li>
+<li>Цветовые стили для разных типов сообщений</li>
+<li>Элементы пользовательского интерфейса </li>
+</ul>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a515db1dcf6506fe139515c28c5a87eef" name="a515db1dcf6506fe139515c28c5a87eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515db1dcf6506fe139515c28c5a87eef">&#9670;&#160;</a></span>printBanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printBanner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит главный баннер системы </p>
+<p>Содержит информацию о версии, авторе и возможностях системы. Использует псевдографику для визуального оформления. </p>
+
+</div>
+</div>
+<a id="a34aa561bb134518d1d919778118cc132" name="a34aa561bb134518d1d919778118cc132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34aa561bb134518d1d919778118cc132">&#9670;&#160;</a></span>printDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printDefault </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>newLine</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит стандартное сообщение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст сообщения </td></tr>
+    <tr><td class="paramname">newLine</td><td>Добавлять перевод строки после сообщения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8d159da55e795e658f13599deac2ee2" name="ad8d159da55e795e658f13599deac2ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d159da55e795e658f13599deac2ee2">&#9670;&#160;</a></span>printDivider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printDivider </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'-'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>length</em></span><span class="paramdefsep"> = </span><span class="paramdefval">60</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рисует горизонтальный разделитель </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>Символ для заполнения линии </td></tr>
+    <tr><td class="paramname">length</td><td>Длина разделителя в символах </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a988af88a58ef9103c08c78729e5ecf7f" name="a988af88a58ef9103c08c78729e5ecf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988af88a58ef9103c08c78729e5ecf7f">&#9670;&#160;</a></span>printError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printError </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит сообщение об ошибке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст описания ошибки </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c8d23b588f011c796d115b02a119119" name="a9c8d23b588f011c796d115b02a119119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c8d23b588f011c796d115b02a119119">&#9670;&#160;</a></span>printHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит заголовок раздела с цветовым оформлением </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Текст заголовка </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a144c4d735ef468fdeb6bc6715c022f8b" name="a144c4d735ef468fdeb6bc6715c022f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144c4d735ef468fdeb6bc6715c022f8b">&#9670;&#160;</a></span>printInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>newLine</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит информационное сообщение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст информации </td></tr>
+    <tr><td class="paramname">newLine</td><td>Добавлять перевод строки после сообщения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a898e68c84983224f87bbeea32290f84d" name="a898e68c84983224f87bbeea32290f84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a898e68c84983224f87bbeea32290f84d">&#9670;&#160;</a></span>printMenuOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printMenuOptions </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит пункты меню </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>Список текстовых пунктов меню </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9aea242346968ea28a95d22575202906" name="a9aea242346968ea28a95d22575202906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aea242346968ea28a95d22575202906">&#9670;&#160;</a></span>printMining()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printMining </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит сообщение о процессе майнинга </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст сообщения с техническими деталями </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32eda42b8d1783c82d772f1880a02cb5" name="a32eda42b8d1783c82d772f1880a02cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32eda42b8d1783c82d772f1880a02cb5">&#9670;&#160;</a></span>printSectionHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printSectionHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит подзаголовок секции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Текст подзаголовка в формате "=== Текст ===" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad009f475f0a7103d4e3f1721dddcba71" name="ad009f475f0a7103d4e3f1721dddcba71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad009f475f0a7103d4e3f1721dddcba71">&#9670;&#160;</a></span>printSuccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printSuccess </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит сообщение об успешной операции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст подтверждения успеха </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73be4efc6ab5df285a52beb8c7f15785" name="a73be4efc6ab5df285a52beb8c7f15785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73be4efc6ab5df285a52beb8c7f15785">&#9670;&#160;</a></span>printWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ConsoleUI::printWarning </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит предупреждение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Текст предупреждения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="_b_c___utilities_8h_source.html">BC_Utilities.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_console_u_i.html">ConsoleUI</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+\doxysection{Класс Persistence\+Manager}
+\hypertarget{class_persistence_manager}{}\label{class_persistence_manager}\index{PersistenceManager@{PersistenceManager}}
+
+
+Класс для управления сохранением и шифрованием данных.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Utilities.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_persistence_manager_ab6dc8de1858e41c9e27453097a93affb}{encrypt\+String}} (const std\+::string \&plaintext, const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Шифрует строку с использованием заданного ключа. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления сохранением и шифрованием данных. 
+
+Предоставляет статические методы для шифрования данных, которые могут быть использованы для безопасного хранения информации. 
+
+\doxysubsection{Методы}
+\Hypertarget{class_persistence_manager_ab6dc8de1858e41c9e27453097a93affb}\index{PersistenceManager@{PersistenceManager}!encryptString@{encryptString}}
+\index{encryptString@{encryptString}!PersistenceManager@{PersistenceManager}}
+\doxysubsubsection{\texorpdfstring{encryptString()}{encryptString()}}
+{\footnotesize\ttfamily \label{class_persistence_manager_ab6dc8de1858e41c9e27453097a93affb} 
+static std\+::string Persistence\+Manager\+::encrypt\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plaintext}{, }\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Шифрует строку с использованием заданного ключа. 
+
+Использует алгоритм AES-\/256-\/\+CBC для шифрования данных. Вектор инициализации (IV) генерируется случайным образом и добавляется к результату.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em plaintext} & Исходная строка для шифрования. \\
+\hline
+{\em key} & Ключ шифрования (должен быть длиной 32 байта для AES-\/256). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованная строка, содержащая IV и зашифрованные данные. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & В случае ошибки шифрования. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Utilities.\+h\end{DoxyCompactItemize}

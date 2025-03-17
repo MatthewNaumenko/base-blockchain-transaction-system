@@ -1,0 +1,197 @@
+\doxysection{Класс Blockchain}
+\hypertarget{class_blockchain}{}\label{class_blockchain}\index{Blockchain@{Blockchain}}
+
+
+Ядро блокчейн-\/системы, управляющее цепочкой блоков и балансами.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Blockchain.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_blockchain_afb66c736ee870ebf75913d01a50f87a4}\label{class_blockchain_afb66c736ee870ebf75913d01a50f87a4} 
+{\bfseries Blockchain} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует блокчейн с генезис-\/блоком \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blockchain_ad6809a2b68bbf57209035b06cd53e656}{add\+User}} (const std\+::string \&username)
+\begin{DoxyCompactList}\small\item\em Регистрирует нового пользователя в системе \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_block}{Block}} \mbox{\hyperlink{class_blockchain_a335a39d8c7a0df600d1c6e613953d6e2}{get\+Latest\+Block}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последний добавленный блок \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_blockchain_a30dd91732f2d4ff4bb8a602469d1e818}{serialize}} () const
+\begin{DoxyCompactList}\small\item\em Сериализует блокчейн в читаемый текстовый формат \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_blockchain_a6d5c16c335c4277f96acd895487125cf}{is\+Transaction\+Valid}} (const \mbox{\hyperlink{class_transaction}{Transaction}} \&tx, const std\+::string \&public\+Key\+PEM, std\+::map$<$ std\+::string, double $>$ \&temp\+Balances) const
+\begin{DoxyCompactList}\small\item\em Проверяет валидность транзакции \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blockchain_ac7214a8cff237fa90a79da758bfefefa}{add\+Block}} (const std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ \&transactions, const std\+::map$<$ std\+::string, std\+::string $>$ \&public\+Keys)
+\begin{DoxyCompactList}\small\item\em Добавляет новый блок с транзакциями \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_blockchain_af6ca6391f76cc5442b45abe7b6119cc8}{is\+Chain\+Valid}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&public\+Keys) const
+\begin{DoxyCompactList}\small\item\em Проверяет целостность всей цепочки \end{DoxyCompactList}\item 
+\Hypertarget{class_blockchain_a081228071d8e5f2b1aa1e0f502865118}\label{class_blockchain_a081228071d8e5f2b1aa1e0f502865118} 
+size\+\_\+t {\bfseries count\+All\+Transactions} () const
+\begin{DoxyCompactList}\small\item\em Возвращает общее количество транзакций в цепочке \end{DoxyCompactList}\item 
+\Hypertarget{class_blockchain_a7eef9427947e16cb240e32d91f9e78b2}\label{class_blockchain_a7eef9427947e16cb240e32d91f9e78b2} 
+void {\bfseries print\+Blockchain} () const
+\begin{DoxyCompactList}\small\item\em Выводит информацию о всех блоках в консоль \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_blockchain_aa608d347b921182d13e8800c50a7fd37}{get\+Balance}} (const std\+::string \&username) const
+\begin{DoxyCompactList}\small\item\em Возвращает текущий баланс пользователя \end{DoxyCompactList}\item 
+\Hypertarget{class_blockchain_a9b68d1f4ac86d48d7c3182f42c20d296}\label{class_blockchain_a9b68d1f4ac86d48d7c3182f42c20d296} 
+void {\bfseries draw\+Chain} () const
+\begin{DoxyCompactList}\small\item\em Отображает ASCII-\/визуализацию цепочки блоков \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Ядро блокчейн-\/системы, управляющее цепочкой блоков и балансами. 
+
+Обеспечивает\+:
+\begin{DoxyItemize}
+\item Создание и верификацию блоков
+\item Управление балансами пользователей
+\item Механизмы добавления транзакций
+\item Потокобезопасные операции с использованием мьютексов 
+\end{DoxyItemize}
+
+\doxysubsection{Методы}
+\Hypertarget{class_blockchain_ac7214a8cff237fa90a79da758bfefefa}\index{Blockchain@{Blockchain}!addBlock@{addBlock}}
+\index{addBlock@{addBlock}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{addBlock()}{addBlock()}}
+{\footnotesize\ttfamily \label{class_blockchain_ac7214a8cff237fa90a79da758bfefefa} 
+void Blockchain\+::add\+Block (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ \&}]{transactions}{, }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{public\+Keys}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет новый блок с транзакциями 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em transactions} & Вектор верифицированных транзакций \\
+\hline
+{\em public\+Keys} & Соответствие пользователей и их публичных ключей\\
+\hline
+\end{DoxyParams}
+Выполняет\+:
+\begin{DoxyItemize}
+\item Пакетную проверку транзакций
+\item Обновление балансов
+\item Создание снапшота системы
+\item Майнинг нового блока 
+\end{DoxyItemize}\Hypertarget{class_blockchain_ad6809a2b68bbf57209035b06cd53e656}\index{Blockchain@{Blockchain}!addUser@{addUser}}
+\index{addUser@{addUser}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily \label{class_blockchain_ad6809a2b68bbf57209035b06cd53e656} 
+void Blockchain\+::add\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{}\end{DoxyParamCaption})}
+
+
+
+Регистрирует нового пользователя в системе 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em username} & Имя пользователя (3-\/20 символов, буквы(анг)/цифры/\+\_\+) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & При неверном формате имени \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_blockchain_aa608d347b921182d13e8800c50a7fd37}\index{Blockchain@{Blockchain}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{getBalance()}{getBalance()}}
+{\footnotesize\ttfamily \label{class_blockchain_aa608d347b921182d13e8800c50a7fd37} 
+double Blockchain\+::get\+Balance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущий баланс пользователя 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em username} & Имя целевого пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Текущий баланс (0 если пользователь не существует) 
+\end{DoxyReturn}
+\Hypertarget{class_blockchain_a335a39d8c7a0df600d1c6e613953d6e2}\index{Blockchain@{Blockchain}!getLatestBlock@{getLatestBlock}}
+\index{getLatestBlock@{getLatestBlock}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{getLatestBlock()}{getLatestBlock()}}
+{\footnotesize\ttfamily \label{class_blockchain_a335a39d8c7a0df600d1c6e613953d6e2} 
+\mbox{\hyperlink{class_block}{Block}} Blockchain\+::get\+Latest\+Block (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последний добавленный блок 
+
+\begin{DoxyWarning}{Предупреждения}
+Не потокобезопасен -\/ должен вызываться внутри синхронизированных блоков 
+\end{DoxyWarning}
+\Hypertarget{class_blockchain_af6ca6391f76cc5442b45abe7b6119cc8}\index{Blockchain@{Blockchain}!isChainValid@{isChainValid}}
+\index{isChainValid@{isChainValid}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{isChainValid()}{isChainValid()}}
+{\footnotesize\ttfamily \label{class_blockchain_af6ca6391f76cc5442b45abe7b6119cc8} 
+bool Blockchain\+::is\+Chain\+Valid (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{public\+Keys}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет целостность всей цепочки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em public\+Keys} & Публичные ключи всех участников \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если все блоки и транзакции валидны
+\end{DoxyReturn}
+Проверяет\+:
+\begin{DoxyItemize}
+\item Proof-\/of-\/\+Work каждого блока
+\item Целостность хешей
+\item Корректность подписей транзакций
+\item Историческую согласованность балансов 
+\end{DoxyItemize}\Hypertarget{class_blockchain_a6d5c16c335c4277f96acd895487125cf}\index{Blockchain@{Blockchain}!isTransactionValid@{isTransactionValid}}
+\index{isTransactionValid@{isTransactionValid}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{isTransactionValid()}{isTransactionValid()}}
+{\footnotesize\ttfamily \label{class_blockchain_a6d5c16c335c4277f96acd895487125cf} 
+bool Blockchain\+::is\+Transaction\+Valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transaction}{Transaction}} \&}]{tx}{, }\item[{const std\+::string \&}]{public\+Key\+PEM}{, }\item[{std\+::map$<$ std\+::string, double $>$ \&}]{temp\+Balances}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверяет валидность транзакции 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tx} & Проверяемая транзакция \\
+\hline
+{\em public\+Key\+PEM} & Публичный ключ отправителя в PEM-\/формате \\
+\hline
+{\em temp\+Balances} & Временные балансы для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если транзакция корректна
+\end{DoxyReturn}
+Выполняет\+:
+\begin{DoxyItemize}
+\item Проверку подписи
+\item Валидацию форматов
+\item Контроль баланса 
+\end{DoxyItemize}\Hypertarget{class_blockchain_a30dd91732f2d4ff4bb8a602469d1e818}\index{Blockchain@{Blockchain}!serialize@{serialize}}
+\index{serialize@{serialize}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily \label{class_blockchain_a30dd91732f2d4ff4bb8a602469d1e818} 
+std\+::string Blockchain\+::serialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Сериализует блокчейн в читаемый текстовый формат 
+
+\begin{DoxyReturn}{Возвращает}
+Строка с полным описанием всех блоков 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Blockchain.\+h\end{DoxyCompactItemize}

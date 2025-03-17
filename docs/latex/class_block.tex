@@ -1,0 +1,134 @@
+\doxysection{Класс Block}
+\hypertarget{class_block}{}\label{class_block}\index{Block@{Block}}
+
+
+Класс-\/посредник для управления блокчейном.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Block.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_block_a4932bc4249f537900ada5f5d16d9ab1d}{Block}} (int idx, const std\+::string \&prev\+Hash, const std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ \&txs, const std\+::map$<$ std\+::string, double $>$ \&snapshot, int diff)
+\begin{DoxyCompactList}\small\item\em Конструктор блока \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_aeee87e6af6792eb204fa75d5d08328b3}{mine\+Block}} (int difficulty)
+\begin{DoxyCompactList}\small\item\em Процесс майнинга блока (Proof-\/of-\/\+Work) \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_block_af4656e51ff3dc7e15940123333df2c91}{calculate\+Block\+Hash}} () const
+\begin{DoxyCompactList}\small\item\em Вычисляет текущий хеш блока на основе приватного метода calculate\+Block\+Hash\+With\+Nonce. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_a40dd7e2a2b16366407b7e5c96a425f00}{print\+Block}} () const
+\begin{DoxyCompactList}\small\item\em Выводит форматированную информацию о блоке \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Геттеры}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_block_af9a67823f8269a49f66d244597209adf}\label{class_block_af9a67823f8269a49f66d244597209adf} 
+const std\+::string \& {\bfseries get\+Timestamp} () const
+\begin{DoxyCompactList}\small\item\em Время создания блока \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a2de6ba4f928a0ac29a39b608b35a8adb}\label{class_block_a2de6ba4f928a0ac29a39b608b35a8adb} 
+const std\+::string \& {\bfseries get\+Hash} () const
+\begin{DoxyCompactList}\small\item\em Текущий хеш блока \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a5a2c550ae33520a723c243901715c29f}\label{class_block_a5a2c550ae33520a723c243901715c29f} 
+const std\+::string \& {\bfseries get\+Previous\+Hash} () const
+\begin{DoxyCompactList}\small\item\em Хеш предыдущего блока \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a82d5cd03f5fc37100b3b31e58bee0ae9}\label{class_block_a82d5cd03f5fc37100b3b31e58bee0ae9} 
+const std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ \& {\bfseries get\+Transactions} () const
+\begin{DoxyCompactList}\small\item\em Доступ к транзакциям \end{DoxyCompactList}\item 
+\Hypertarget{class_block_adbb7428afe81c791c16610c935eecc33}\label{class_block_adbb7428afe81c791c16610c935eecc33} 
+const int \& {\bfseries get\+Index} () const
+\begin{DoxyCompactList}\small\item\em Позиция в блокчейне \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a92c09aa4593a529b6209d00b805364e9}\label{class_block_a92c09aa4593a529b6209d00b805364e9} 
+const int \& {\bfseries get\+Difficulty} () const
+\begin{DoxyCompactList}\small\item\em Сложность майнинга \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a7a713e9fc74a83c6d5ed4657eafc89bb}\label{class_block_a7a713e9fc74a83c6d5ed4657eafc89bb} 
+const std\+::map$<$ std\+::string, double $>$ \& {\bfseries get\+Balance\+Snapshot} () const
+\begin{DoxyCompactList}\small\item\em Состояние балансов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Подробное описание}
+Класс-\/посредник для управления блокчейном. 
+
+Класс \doxylink{class_blockchain_controller}{Blockchain\+Controller} предоставляет методы для обработки транзакций, проверки валидности блокчейна, регистрации пользователей и работы с балансами. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_block_a4932bc4249f537900ada5f5d16d9ab1d}\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily \label{class_block_a4932bc4249f537900ada5f5d16d9ab1d} 
+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{idx}{, }\item[{const std\+::string \&}]{prev\+Hash}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} $>$ \&}]{txs}{, }\item[{const std\+::map$<$ std\+::string, double $>$ \&}]{snapshot}{, }\item[{int}]{diff}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор блока 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em idx} & Индекс блока в цепочке (\texorpdfstring{$>$}{>} 0) \\
+\hline
+{\em prev\+Hash} & Валидный хеш предыдущего блока \\
+\hline
+{\em txs} & Вектор верифицированных транзакций \\
+\hline
+{\em snapshot} & Снимок балансов кошельков \\
+\hline
+{\em diff} & Требуемое количество ведущих нулей в хеше \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_block_af4656e51ff3dc7e15940123333df2c91}\index{Block@{Block}!calculateBlockHash@{calculateBlockHash}}
+\index{calculateBlockHash@{calculateBlockHash}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{calculateBlockHash()}{calculateBlockHash()}}
+{\footnotesize\ttfamily \label{class_block_af4656e51ff3dc7e15940123333df2c91} 
+std\+::string Block\+::calculate\+Block\+Hash (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Вычисляет текущий хеш блока на основе приватного метода calculate\+Block\+Hash\+With\+Nonce. 
+
+\begin{DoxyReturn}{Возвращает}
+HEX-\/строка с хешем (длиной 64 символа) 
+\end{DoxyReturn}
+\Hypertarget{class_block_aeee87e6af6792eb204fa75d5d08328b3}\index{Block@{Block}!mineBlock@{mineBlock}}
+\index{mineBlock@{mineBlock}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{mineBlock()}{mineBlock()}}
+{\footnotesize\ttfamily \label{class_block_aeee87e6af6792eb204fa75d5d08328b3} 
+void Block\+::mine\+Block (\begin{DoxyParamCaption}\item[{int}]{difficulty}{}\end{DoxyParamCaption})}
+
+
+
+Процесс майнинга блока (Proof-\/of-\/\+Work) 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em difficulty} & Требуемое количество ведущих нулей \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & При ошибках майнинга \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_block_a40dd7e2a2b16366407b7e5c96a425f00}\index{Block@{Block}!printBlock@{printBlock}}
+\index{printBlock@{printBlock}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{printBlock()}{printBlock()}}
+{\footnotesize\ttfamily \label{class_block_a40dd7e2a2b16366407b7e5c96a425f00} 
+void Block\+::print\+Block (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Выводит форматированную информацию о блоке 
+
+Формат включает\+:
+\begin{DoxyItemize}
+\item Индекс и временную метку
+\item Хеши текущего и предыдущего блоков
+\item Список транзакций в сокращенном формате 
+\end{DoxyItemize}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Block.\+h\end{DoxyCompactItemize}

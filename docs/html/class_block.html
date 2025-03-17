@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>base-blockchain-transaction-system: Класс Block</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">base-blockchain-transaction-system
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_block.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_block-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Block</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс-посредник для управления блокчейном.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_b_c___block_8h_source.html">BC_Block.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4932bc4249f537900ada5f5d16d9ab1d" id="r_a4932bc4249f537900ada5f5d16d9ab1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4932bc4249f537900ada5f5d16d9ab1d">Block</a> (int idx, const std::string &amp;prevHash, const std::vector&lt; <a class="el" href="class_transaction.html">Transaction</a> &gt; &amp;txs, const std::map&lt; std::string, double &gt; &amp;snapshot, int diff)</td></tr>
+<tr class="memdesc:a4932bc4249f537900ada5f5d16d9ab1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор блока  <br /></td></tr>
+<tr class="separator:a4932bc4249f537900ada5f5d16d9ab1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee87e6af6792eb204fa75d5d08328b3" id="r_aeee87e6af6792eb204fa75d5d08328b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeee87e6af6792eb204fa75d5d08328b3">mineBlock</a> (int difficulty)</td></tr>
+<tr class="memdesc:aeee87e6af6792eb204fa75d5d08328b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процесс майнинга блока (Proof-of-Work)  <br /></td></tr>
+<tr class="separator:aeee87e6af6792eb204fa75d5d08328b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4656e51ff3dc7e15940123333df2c91" id="r_af4656e51ff3dc7e15940123333df2c91"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4656e51ff3dc7e15940123333df2c91">calculateBlockHash</a> () const</td></tr>
+<tr class="memdesc:af4656e51ff3dc7e15940123333df2c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет текущий хеш блока на основе приватного метода calculateBlockHashWithNonce.  <br /></td></tr>
+<tr class="separator:af4656e51ff3dc7e15940123333df2c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40dd7e2a2b16366407b7e5c96a425f00" id="r_a40dd7e2a2b16366407b7e5c96a425f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40dd7e2a2b16366407b7e5c96a425f00">printBlock</a> () const</td></tr>
+<tr class="memdesc:a40dd7e2a2b16366407b7e5c96a425f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит форматированную информацию о блоке  <br /></td></tr>
+<tr class="separator:a40dd7e2a2b16366407b7e5c96a425f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Геттеры</div></td></tr>
+<tr class="memitem:af9a67823f8269a49f66d244597209adf" id="r_af9a67823f8269a49f66d244597209adf"><td class="memItemLeft" align="right" valign="top"><a id="af9a67823f8269a49f66d244597209adf" name="af9a67823f8269a49f66d244597209adf"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTimestamp</b> () const</td></tr>
+<tr class="memdesc:af9a67823f8269a49f66d244597209adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время создания блока <br /></td></tr>
+<tr class="separator:af9a67823f8269a49f66d244597209adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de6ba4f928a0ac29a39b608b35a8adb" id="r_a2de6ba4f928a0ac29a39b608b35a8adb"><td class="memItemLeft" align="right" valign="top"><a id="a2de6ba4f928a0ac29a39b608b35a8adb" name="a2de6ba4f928a0ac29a39b608b35a8adb"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHash</b> () const</td></tr>
+<tr class="memdesc:a2de6ba4f928a0ac29a39b608b35a8adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий хеш блока <br /></td></tr>
+<tr class="separator:a2de6ba4f928a0ac29a39b608b35a8adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2c550ae33520a723c243901715c29f" id="r_a5a2c550ae33520a723c243901715c29f"><td class="memItemLeft" align="right" valign="top"><a id="a5a2c550ae33520a723c243901715c29f" name="a5a2c550ae33520a723c243901715c29f"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPreviousHash</b> () const</td></tr>
+<tr class="memdesc:a5a2c550ae33520a723c243901715c29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хеш предыдущего блока <br /></td></tr>
+<tr class="separator:a5a2c550ae33520a723c243901715c29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d5cd03f5fc37100b3b31e58bee0ae9" id="r_a82d5cd03f5fc37100b3b31e58bee0ae9"><td class="memItemLeft" align="right" valign="top"><a id="a82d5cd03f5fc37100b3b31e58bee0ae9" name="a82d5cd03f5fc37100b3b31e58bee0ae9"></a>
+const std::vector&lt; <a class="el" href="class_transaction.html">Transaction</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTransactions</b> () const</td></tr>
+<tr class="memdesc:a82d5cd03f5fc37100b3b31e58bee0ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступ к транзакциям <br /></td></tr>
+<tr class="separator:a82d5cd03f5fc37100b3b31e58bee0ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb7428afe81c791c16610c935eecc33" id="r_adbb7428afe81c791c16610c935eecc33"><td class="memItemLeft" align="right" valign="top"><a id="adbb7428afe81c791c16610c935eecc33" name="adbb7428afe81c791c16610c935eecc33"></a>
+const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> () const</td></tr>
+<tr class="memdesc:adbb7428afe81c791c16610c935eecc33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позиция в блокчейне <br /></td></tr>
+<tr class="separator:adbb7428afe81c791c16610c935eecc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c09aa4593a529b6209d00b805364e9" id="r_a92c09aa4593a529b6209d00b805364e9"><td class="memItemLeft" align="right" valign="top"><a id="a92c09aa4593a529b6209d00b805364e9" name="a92c09aa4593a529b6209d00b805364e9"></a>
+const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDifficulty</b> () const</td></tr>
+<tr class="memdesc:a92c09aa4593a529b6209d00b805364e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сложность майнинга <br /></td></tr>
+<tr class="separator:a92c09aa4593a529b6209d00b805364e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a713e9fc74a83c6d5ed4657eafc89bb" id="r_a7a713e9fc74a83c6d5ed4657eafc89bb"><td class="memItemLeft" align="right" valign="top"><a id="a7a713e9fc74a83c6d5ed4657eafc89bb" name="a7a713e9fc74a83c6d5ed4657eafc89bb"></a>
+const std::map&lt; std::string, double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBalanceSnapshot</b> () const</td></tr>
+<tr class="memdesc:a7a713e9fc74a83c6d5ed4657eafc89bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние балансов <br /></td></tr>
+<tr class="separator:a7a713e9fc74a83c6d5ed4657eafc89bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс-посредник для управления блокчейном. </p>
+<p>Класс <a class="el" href="class_blockchain_controller.html" title="Класс-посредник для управления блокчейном.">BlockchainController</a> предоставляет методы для обработки транзакций, проверки валидности блокчейна, регистрации пользователей и работы с балансами. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4932bc4249f537900ada5f5d16d9ab1d" name="a4932bc4249f537900ada5f5d16d9ab1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4932bc4249f537900ada5f5d16d9ab1d">&#9670;&#160;</a></span>Block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Block::Block </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>prevHash</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_transaction.html">Transaction</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>txs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>snapshot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>diff</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор блока </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>Индекс блока в цепочке (&gt; 0) </td></tr>
+    <tr><td class="paramname">prevHash</td><td>Валидный хеш предыдущего блока </td></tr>
+    <tr><td class="paramname">txs</td><td>Вектор верифицированных транзакций </td></tr>
+    <tr><td class="paramname">snapshot</td><td>Снимок балансов кошельков </td></tr>
+    <tr><td class="paramname">diff</td><td>Требуемое количество ведущих нулей в хеше </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af4656e51ff3dc7e15940123333df2c91" name="af4656e51ff3dc7e15940123333df2c91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4656e51ff3dc7e15940123333df2c91">&#9670;&#160;</a></span>calculateBlockHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Block::calculateBlockHash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисляет текущий хеш блока на основе приватного метода calculateBlockHashWithNonce. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>HEX-строка с хешем (длиной 64 символа) </dd></dl>
+
+</div>
+</div>
+<a id="aeee87e6af6792eb204fa75d5d08328b3" name="aeee87e6af6792eb204fa75d5d08328b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee87e6af6792eb204fa75d5d08328b3">&#9670;&#160;</a></span>mineBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Block::mineBlock </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>difficulty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Процесс майнинга блока (Proof-of-Work) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">difficulty</td><td>Требуемое количество ведущих нулей </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>При ошибках майнинга </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40dd7e2a2b16366407b7e5c96a425f00" name="a40dd7e2a2b16366407b7e5c96a425f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40dd7e2a2b16366407b7e5c96a425f00">&#9670;&#160;</a></span>printBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Block::printBlock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит форматированную информацию о блоке </p>
+<p>Формат включает:</p><ul>
+<li>Индекс и временную метку</li>
+<li>Хеши текущего и предыдущего блоков</li>
+<li>Список транзакций в сокращенном формате </li>
+</ul>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="_b_c___block_8h_source.html">BC_Block.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_block.html">Block</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

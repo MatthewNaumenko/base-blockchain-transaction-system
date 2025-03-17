@@ -1,0 +1,75 @@
+\doxysection{Класс RSAKey\+Generator}
+\hypertarget{class_r_s_a_key_generator}{}\label{class_r_s_a_key_generator}\index{RSAKeyGenerator@{RSAKeyGenerator}}
+
+
+Класс для генерации RSA-\/ключей  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+RSAKey\+Generator.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_s_a_key_generator_aa1e264572af92fbc6289c08de06777d1}{generate\+RSAKey\+Pair}} (int key\+Length=2048)
+\item 
+static std\+::string \mbox{\hyperlink{class_r_s_a_key_generator_aaa205518405821e287ca11ceb553f778}{get\+PEMFrom\+Private\+Key}} (EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*}pkey)
+\item 
+static std\+::string \mbox{\hyperlink{class_r_s_a_key_generator_a61baefc966d36403d276430296041cb0}{get\+PEMFrom\+Public\+Key}} (EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*}pkey)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для генерации RSA-\/ключей 
+
+Класс \doxylink{class_r_s_a_key_generator}{RSAKey\+Generator} предоставляет статические методы для генерации RSA-\/ключей и их преобразования в текстовый формат PEM. Это позволяет использовать функциональность без необходимости создания экземпляра класса. 
+
+\doxysubsection{Методы}
+\Hypertarget{class_r_s_a_key_generator_aa1e264572af92fbc6289c08de06777d1}\index{RSAKeyGenerator@{RSAKeyGenerator}!generateRSAKeyPair@{generateRSAKeyPair}}
+\index{generateRSAKeyPair@{generateRSAKeyPair}!RSAKeyGenerator@{RSAKeyGenerator}}
+\doxysubsubsection{\texorpdfstring{generateRSAKeyPair()}{generateRSAKeyPair()}}
+{\footnotesize\ttfamily \label{class_r_s_a_key_generator_aa1e264572af92fbc6289c08de06777d1} 
+static EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*} RSAKey\+Generator\+::generate\+RSAKey\+Pair (\begin{DoxyParamCaption}\item[{int}]{key\+Length}{ = {\ttfamily 2048}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Генерация пары RSA-\/ключей. 
+\begin{DoxyParams}{Аргументы}
+{\em key\+Length} & Длина ключа в битах (по умолчанию 2048). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на сгенерированный ключ (EVP\+\_\+\+PKEY) или nullptr в случае ошибки. 
+\end{DoxyReturn}
+\Hypertarget{class_r_s_a_key_generator_aaa205518405821e287ca11ceb553f778}\index{RSAKeyGenerator@{RSAKeyGenerator}!getPEMFromPrivateKey@{getPEMFromPrivateKey}}
+\index{getPEMFromPrivateKey@{getPEMFromPrivateKey}!RSAKeyGenerator@{RSAKeyGenerator}}
+\doxysubsubsection{\texorpdfstring{getPEMFromPrivateKey()}{getPEMFromPrivateKey()}}
+{\footnotesize\ttfamily \label{class_r_s_a_key_generator_aaa205518405821e287ca11ceb553f778} 
+static std\+::string RSAKey\+Generator\+::get\+PEMFrom\+Private\+Key (\begin{DoxyParamCaption}\item[{EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*}}]{pkey}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Преобразование приватного ключа в строку в формате PEM. 
+\begin{DoxyParams}{Аргументы}
+{\em pkey} & Указатель на приватный ключ (EVP\+\_\+\+PKEY). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в формате PEM или пустая строка в случае ошибки. 
+\end{DoxyReturn}
+\Hypertarget{class_r_s_a_key_generator_a61baefc966d36403d276430296041cb0}\index{RSAKeyGenerator@{RSAKeyGenerator}!getPEMFromPublicKey@{getPEMFromPublicKey}}
+\index{getPEMFromPublicKey@{getPEMFromPublicKey}!RSAKeyGenerator@{RSAKeyGenerator}}
+\doxysubsubsection{\texorpdfstring{getPEMFromPublicKey()}{getPEMFromPublicKey()}}
+{\footnotesize\ttfamily \label{class_r_s_a_key_generator_a61baefc966d36403d276430296041cb0} 
+static std\+::string RSAKey\+Generator\+::get\+PEMFrom\+Public\+Key (\begin{DoxyParamCaption}\item[{EVP\+\_\+\+PKEY \texorpdfstring{$\ast$}{*}}]{pkey}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Преобразование публичного ключа в строку в формате PEM. 
+\begin{DoxyParams}{Аргументы}
+{\em pkey} & Указатель на публичный ключ (EVP\+\_\+\+PKEY). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Строка в формате PEM или пустая строка в случае ошибки. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+RSAKey\+Generator.\+h\end{DoxyCompactItemize}

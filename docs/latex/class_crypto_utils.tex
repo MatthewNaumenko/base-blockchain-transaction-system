@@ -1,0 +1,120 @@
+\doxysection{Класс Crypto\+Utils}
+\hypertarget{class_crypto_utils}{}\label{class_crypto_utils}\index{CryptoUtils@{CryptoUtils}}
+
+
+Класс для криптографических операций с использованием Open\+SSL.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Crypto\+Utils.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_crypto_utils_af4104f671377661637287fe98a1a65c6}{calculate\+Hash}} (const std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em Вычисляет SHA-\/256 хеш строки. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_crypto_utils_a446bb31d7cfb027c3997631368462f0f}{sign\+Data}} (const std\+::string \&data, const std\+::string \&private\+Key\+PEM)
+\begin{DoxyCompactList}\small\item\em Подписывает данные с использованием RSA приватного ключа. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_crypto_utils_a8f32567f81b901a0d0ec6e21c0ab2ddd}{verify\+Signature}} (const std\+::string \&data, const std\+::string \&signature\+Hex, const std\+::string \&public\+Key\+PEM)
+\begin{DoxyCompactList}\small\item\em Проверяет RSA подпись данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для криптографических операций с использованием Open\+SSL. 
+
+Предоставляет методы для\+:
+\begin{DoxyItemize}
+\item вычисления SHA-\/256 хеша,
+\item подписи данных с помощью RSA приватного ключа,
+\item проверки подписи с помощью RSA публичного ключа.
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Предупреждения}
+Для работы требуется библиотека Open\+SSL. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_crypto_utils_af4104f671377661637287fe98a1a65c6}\index{CryptoUtils@{CryptoUtils}!calculateHash@{calculateHash}}
+\index{calculateHash@{calculateHash}!CryptoUtils@{CryptoUtils}}
+\doxysubsubsection{\texorpdfstring{calculateHash()}{calculateHash()}}
+{\footnotesize\ttfamily \label{class_crypto_utils_af4104f671377661637287fe98a1a65c6} 
+static std\+::string Crypto\+Utils\+::calculate\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисляет SHA-\/256 хеш строки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input} & Входные данные для хеширования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+HEX-\/строка с хешем (длиной 64 символа). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & При ошибках в Open\+SSL. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_crypto_utils_a446bb31d7cfb027c3997631368462f0f}\index{CryptoUtils@{CryptoUtils}!signData@{signData}}
+\index{signData@{signData}!CryptoUtils@{CryptoUtils}}
+\doxysubsubsection{\texorpdfstring{signData()}{signData()}}
+{\footnotesize\ttfamily \label{class_crypto_utils_a446bb31d7cfb027c3997631368462f0f} 
+static std\+::string Crypto\+Utils\+::sign\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{const std\+::string \&}]{private\+Key\+PEM}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Подписывает данные с использованием RSA приватного ключа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em data} & Данные для подписи. \\
+\hline
+{\em private\+Key\+PEM} & Приватный ключ в формате PEM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+HEX-\/строка с подписью. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & При ошибках\+:
+\begin{DoxyItemize}
+\item неверный формат ключа,
+\item ошибки Open\+SSL. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_crypto_utils_a8f32567f81b901a0d0ec6e21c0ab2ddd}\index{CryptoUtils@{CryptoUtils}!verifySignature@{verifySignature}}
+\index{verifySignature@{verifySignature}!CryptoUtils@{CryptoUtils}}
+\doxysubsubsection{\texorpdfstring{verifySignature()}{verifySignature()}}
+{\footnotesize\ttfamily \label{class_crypto_utils_a8f32567f81b901a0d0ec6e21c0ab2ddd} 
+static bool Crypto\+Utils\+::verify\+Signature (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{const std\+::string \&}]{signature\+Hex}{, }\item[{const std\+::string \&}]{public\+Key\+PEM}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет RSA подпись данных. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em data} & Исходные данные. \\
+\hline
+{\em signature\+Hex} & Подпись в HEX-\/формате. \\
+\hline
+{\em public\+Key\+PEM} & Публичный ключ в формате PEM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ подпись верна, false -\/ ошибка проверки. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Не бросает исключения, ошибки логируются в \doxylink{class_console_u_i}{Console\+UI}. 
+\end{DoxyNote}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Crypto\+Utils.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>base-blockchain-transaction-system: Исходный файл include/BC_Transaction.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">base-blockchain-transaction-system
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_b_c___transaction_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BC_Transaction.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// BC_Transaction.h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Системные библиотеки</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_transaction.html">   15</a></span><span class="keyword">class </span><a class="code hl_function" href="class_transaction.html#ac2a6e8a77cf8011f939cf9e3e05925a5">Transaction</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::string sender;     </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::string receiver;   </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">double</span> amount;          </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string txId;       </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string timestamp;  </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string metadata;   </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::string signature;  </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::string getDataToSign() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_transaction.html#ac2a6e8a77cf8011f939cf9e3e05925a5">   44</a></span>    <a class="code hl_function" href="class_transaction.html#ac2a6e8a77cf8011f939cf9e3e05925a5">Transaction</a>(<span class="keyword">const</span> std::string &amp;from, <span class="keyword">const</span> std::string &amp;to, <span class="keywordtype">double</span> value, <span class="keyword">const</span> std::string &amp;meta = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_transaction.html#a95c97cdcc0b37e148eaa0ae02a2c98bc">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_transaction.html#a95c97cdcc0b37e148eaa0ae02a2c98bc">signTransaction</a>(<span class="keyword">const</span> std::string &amp;privateKeyPEM);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_transaction.html#a63a280856abbd38ffb5e679f35e3a932">   62</a></span>    std::string <a class="code hl_function" href="class_transaction.html#a63a280856abbd38ffb5e679f35e3a932">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_transaction.html#aba00e1dcb4b5047114dcf8e42001a9a9">   65</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#aba00e1dcb4b5047114dcf8e42001a9a9">getTxId</a>() <span class="keyword">const</span>;         </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_transaction.html#ade0800e40c2ca358a1d2d07eeeb8dfca">   66</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#ade0800e40c2ca358a1d2d07eeeb8dfca">getSender</a>() <span class="keyword">const</span>;       </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_transaction.html#a066aa297bee88c83619a863681170076">   67</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#a066aa297bee88c83619a863681170076">getSignature</a>() <span class="keyword">const</span>;    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_transaction.html#a44735ef16560ffdfdeaa43df3822b420">   68</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#a44735ef16560ffdfdeaa43df3822b420">getReceiver</a>() <span class="keyword">const</span>;     </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_transaction.html#a3ead6640530a1238516b004325d457f9">   69</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#a3ead6640530a1238516b004325d457f9">getTimestamp</a>() <span class="keyword">const</span>;    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_transaction.html#a10e4e0809bfbce325871041f81148951">   70</a></span>    <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="class_transaction.html#a10e4e0809bfbce325871041f81148951">getMetadata</a>() <span class="keyword">const</span>;     </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_transaction.html#a82c5d600cfed0e98c66e5c01ae280229">   71</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;<a class="code hl_function" href="class_transaction.html#a82c5d600cfed0e98c66e5c01ae280229">getAmount</a>() <span class="keyword">const</span>;            </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="ttc" id="aclass_transaction_html_a066aa297bee88c83619a863681170076"><div class="ttname"><a href="class_transaction.html#a066aa297bee88c83619a863681170076">Transaction::getSignature</a></div><div class="ttdeci">const std::string &amp; getSignature() const</div><div class="ttdoc">Подпись в PEM или пустая строка</div></div>
+<div class="ttc" id="aclass_transaction_html_a10e4e0809bfbce325871041f81148951"><div class="ttname"><a href="class_transaction.html#a10e4e0809bfbce325871041f81148951">Transaction::getMetadata</a></div><div class="ttdeci">const std::string &amp; getMetadata() const</div><div class="ttdoc">Метаданные (обрезанная версия)</div></div>
+<div class="ttc" id="aclass_transaction_html_a3ead6640530a1238516b004325d457f9"><div class="ttname"><a href="class_transaction.html#a3ead6640530a1238516b004325d457f9">Transaction::getTimestamp</a></div><div class="ttdeci">const std::string &amp; getTimestamp() const</div><div class="ttdoc">Временная метка создания транзакции</div></div>
+<div class="ttc" id="aclass_transaction_html_a44735ef16560ffdfdeaa43df3822b420"><div class="ttname"><a href="class_transaction.html#a44735ef16560ffdfdeaa43df3822b420">Transaction::getReceiver</a></div><div class="ttdeci">const std::string &amp; getReceiver() const</div><div class="ttdoc">Нормализованный адрес получателя</div></div>
+<div class="ttc" id="aclass_transaction_html_a63a280856abbd38ffb5e679f35e3a932"><div class="ttname"><a href="class_transaction.html#a63a280856abbd38ffb5e679f35e3a932">Transaction::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Сериализует транзакцию в читаемый формат</div></div>
+<div class="ttc" id="aclass_transaction_html_a82c5d600cfed0e98c66e5c01ae280229"><div class="ttname"><a href="class_transaction.html#a82c5d600cfed0e98c66e5c01ae280229">Transaction::getAmount</a></div><div class="ttdeci">const double &amp; getAmount() const</div><div class="ttdoc">Фактически сохраненная сумма</div></div>
+<div class="ttc" id="aclass_transaction_html_a95c97cdcc0b37e148eaa0ae02a2c98bc"><div class="ttname"><a href="class_transaction.html#a95c97cdcc0b37e148eaa0ae02a2c98bc">Transaction::signTransaction</a></div><div class="ttdeci">void signTransaction(const std::string &amp;privateKeyPEM)</div><div class="ttdoc">Выполняет криптографическое подписание транзакции</div></div>
+<div class="ttc" id="aclass_transaction_html_aba00e1dcb4b5047114dcf8e42001a9a9"><div class="ttname"><a href="class_transaction.html#aba00e1dcb4b5047114dcf8e42001a9a9">Transaction::getTxId</a></div><div class="ttdeci">const std::string &amp; getTxId() const</div><div class="ttdoc">Группа методов только для чтения (поля защищены от прямой модификации)</div></div>
+<div class="ttc" id="aclass_transaction_html_ac2a6e8a77cf8011f939cf9e3e05925a5"><div class="ttname"><a href="class_transaction.html#ac2a6e8a77cf8011f939cf9e3e05925a5">Transaction::Transaction</a></div><div class="ttdeci">Transaction(const std::string &amp;from, const std::string &amp;to, double value, const std::string &amp;meta=&quot;&quot;)</div><div class="ttdoc">Создает транзакцию с базовой валидацией полей</div></div>
+<div class="ttc" id="aclass_transaction_html_ade0800e40c2ca358a1d2d07eeeb8dfca"><div class="ttname"><a href="class_transaction.html#ade0800e40c2ca358a1d2d07eeeb8dfca">Transaction::getSender</a></div><div class="ttdeci">const std::string &amp; getSender() const</div><div class="ttdoc">Нормализованный адрес отправителя</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>BC_Transaction.h</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

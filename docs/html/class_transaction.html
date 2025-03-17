@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>base-blockchain-transaction-system: Класс Transaction</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">base-blockchain-transaction-system
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_transaction.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_transaction-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Transaction</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий криптографически защищенную транзакцию блокчейна  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_b_c___transaction_8h_source.html">BC_Transaction.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac2a6e8a77cf8011f939cf9e3e05925a5" id="r_ac2a6e8a77cf8011f939cf9e3e05925a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a6e8a77cf8011f939cf9e3e05925a5">Transaction</a> (const std::string &amp;from, const std::string &amp;to, double value, const std::string &amp;meta=&quot;&quot;)</td></tr>
+<tr class="memdesc:ac2a6e8a77cf8011f939cf9e3e05925a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает транзакцию с базовой валидацией полей  <br /></td></tr>
+<tr class="separator:ac2a6e8a77cf8011f939cf9e3e05925a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c97cdcc0b37e148eaa0ae02a2c98bc" id="r_a95c97cdcc0b37e148eaa0ae02a2c98bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95c97cdcc0b37e148eaa0ae02a2c98bc">signTransaction</a> (const std::string &amp;privateKeyPEM)</td></tr>
+<tr class="memdesc:a95c97cdcc0b37e148eaa0ae02a2c98bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптографическое подписание транзакции  <br /></td></tr>
+<tr class="separator:a95c97cdcc0b37e148eaa0ae02a2c98bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a280856abbd38ffb5e679f35e3a932" id="r_a63a280856abbd38ffb5e679f35e3a932"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63a280856abbd38ffb5e679f35e3a932">toString</a> () const</td></tr>
+<tr class="memdesc:a63a280856abbd38ffb5e679f35e3a932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализует транзакцию в читаемый формат  <br /></td></tr>
+<tr class="separator:a63a280856abbd38ffb5e679f35e3a932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aba00e1dcb4b5047114dcf8e42001a9a9" id="r_aba00e1dcb4b5047114dcf8e42001a9a9"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba00e1dcb4b5047114dcf8e42001a9a9">getTxId</a> () const</td></tr>
+<tr class="memdesc:aba00e1dcb4b5047114dcf8e42001a9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Группа методов только для чтения (поля защищены от прямой модификации)  <br /></td></tr>
+<tr class="separator:aba00e1dcb4b5047114dcf8e42001a9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0800e40c2ca358a1d2d07eeeb8dfca" id="r_ade0800e40c2ca358a1d2d07eeeb8dfca"><td class="memItemLeft" align="right" valign="top"><a id="ade0800e40c2ca358a1d2d07eeeb8dfca" name="ade0800e40c2ca358a1d2d07eeeb8dfca"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSender</b> () const</td></tr>
+<tr class="memdesc:ade0800e40c2ca358a1d2d07eeeb8dfca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нормализованный адрес отправителя <br /></td></tr>
+<tr class="separator:ade0800e40c2ca358a1d2d07eeeb8dfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066aa297bee88c83619a863681170076" id="r_a066aa297bee88c83619a863681170076"><td class="memItemLeft" align="right" valign="top"><a id="a066aa297bee88c83619a863681170076" name="a066aa297bee88c83619a863681170076"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSignature</b> () const</td></tr>
+<tr class="memdesc:a066aa297bee88c83619a863681170076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подпись в PEM или пустая строка <br /></td></tr>
+<tr class="separator:a066aa297bee88c83619a863681170076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44735ef16560ffdfdeaa43df3822b420" id="r_a44735ef16560ffdfdeaa43df3822b420"><td class="memItemLeft" align="right" valign="top"><a id="a44735ef16560ffdfdeaa43df3822b420" name="a44735ef16560ffdfdeaa43df3822b420"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getReceiver</b> () const</td></tr>
+<tr class="memdesc:a44735ef16560ffdfdeaa43df3822b420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нормализованный адрес получателя <br /></td></tr>
+<tr class="separator:a44735ef16560ffdfdeaa43df3822b420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ead6640530a1238516b004325d457f9" id="r_a3ead6640530a1238516b004325d457f9"><td class="memItemLeft" align="right" valign="top"><a id="a3ead6640530a1238516b004325d457f9" name="a3ead6640530a1238516b004325d457f9"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTimestamp</b> () const</td></tr>
+<tr class="memdesc:a3ead6640530a1238516b004325d457f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Временная метка создания транзакции <br /></td></tr>
+<tr class="separator:a3ead6640530a1238516b004325d457f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e4e0809bfbce325871041f81148951" id="r_a10e4e0809bfbce325871041f81148951"><td class="memItemLeft" align="right" valign="top"><a id="a10e4e0809bfbce325871041f81148951" name="a10e4e0809bfbce325871041f81148951"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMetadata</b> () const</td></tr>
+<tr class="memdesc:a10e4e0809bfbce325871041f81148951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метаданные (обрезанная версия) <br /></td></tr>
+<tr class="separator:a10e4e0809bfbce325871041f81148951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c5d600cfed0e98c66e5c01ae280229" id="r_a82c5d600cfed0e98c66e5c01ae280229"><td class="memItemLeft" align="right" valign="top"><a id="a82c5d600cfed0e98c66e5c01ae280229" name="a82c5d600cfed0e98c66e5c01ae280229"></a>
+const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getAmount</b> () const</td></tr>
+<tr class="memdesc:a82c5d600cfed0e98c66e5c01ae280229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фактически сохраненная сумма <br /></td></tr>
+<tr class="separator:a82c5d600cfed0e98c66e5c01ae280229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, представляющий криптографически защищенную транзакцию блокчейна </p>
+<p>Инкапсулирует логику валидации входных данных, генерации цифровой подписи и сериализации транзакции. Все операции выполняют предварительные проверки целостности данных. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac2a6e8a77cf8011f939cf9e3e05925a5" name="ac2a6e8a77cf8011f939cf9e3e05925a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a6e8a77cf8011f939cf9e3e05925a5">&#9670;&#160;</a></span>Transaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transaction::Transaction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создает транзакцию с базовой валидацией полей </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>Адрес отправителя (только валидные Base58Check-адреса) </td></tr>
+    <tr><td class="paramname">to</td><td>Адрес получателя (аналогично from) </td></tr>
+    <tr><td class="paramname">value</td><td>Положительная сумма перевода (&lt;=0 инициализирует 0) </td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные (обрезаются до 512 символов, могут быть пустыми) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">implicit</td><td>неявная инициализация невалидных полей пустыми значениями/нулем </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Автоматически генерирует txId и timestamp через <a class="el" href="class_crypto_utils.html" title="Класс для криптографических операций с использованием OpenSSL.">CryptoUtils</a> и <a class="el" href="class_time_utils.html" title="Класс утилит для работы со временем">TimeUtils</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aba00e1dcb4b5047114dcf8e42001a9a9" name="aba00e1dcb4b5047114dcf8e42001a9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba00e1dcb4b5047114dcf8e42001a9a9">&#9670;&#160;</a></span>getTxId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Transaction::getTxId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Группа методов только для чтения (поля защищены от прямой модификации) </p>
+<p>Хеш-идентификатор транзакции </p>
+
+</div>
+</div>
+<a id="a95c97cdcc0b37e148eaa0ae02a2c98bc" name="a95c97cdcc0b37e148eaa0ae02a2c98bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c97cdcc0b37e148eaa0ae02a2c98bc">&#9670;&#160;</a></span>signTransaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transaction::signTransaction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>privateKeyPEM</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптографическое подписание транзакции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">privateKeyPEM</td><td>Приватный ключ в PEM-формате с заголовками </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>При: повторном подписании, невалидных полях транзакции, ошибках криптографических операций, несоответствии формата ключа </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Логирует процесс через <a class="el" href="class_console_u_i.html#a144c4d735ef468fdeb6bc6715c022f8b" title="Выводит информационное сообщение">ConsoleUI::printInfo</a>. Требует предварительной инициализации всех полей транзакции (кроме signature) </dd></dl>
+
+</div>
+</div>
+<a id="a63a280856abbd38ffb5e679f35e3a932" name="a63a280856abbd38ffb5e679f35e3a932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a280856abbd38ffb5e679f35e3a932">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Transaction::toString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сериализует транзакцию в читаемый формат </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка вида "txId: ..., From: ..., To: ..., Amount: X.XXXX, ..." </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Включает все поля кроме подписи. Для подписи использует <a class="el" href="#a066aa297bee88c83619a863681170076" title="Подпись в PEM или пустая строка">getSignature()</a> </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Формат вывода может меняться </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="_b_c___transaction_8h_source.html">BC_Transaction.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_transaction.html">Transaction</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

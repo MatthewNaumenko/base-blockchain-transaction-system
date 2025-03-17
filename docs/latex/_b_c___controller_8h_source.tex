@@ -1,0 +1,44 @@
+\doxysection{BC\+\_\+\+Controller.\+h}
+\hypertarget{_b_c___controller_8h_source}{}\label{_b_c___controller_8h_source}\index{include/BC\_Controller.h@{include/BC\_Controller.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ BC\_Controller.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Системные\ библиотеки}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}BC\_Blockchain.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transaction}{Transaction}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blockchain_controller_a8a3ee20378f9f17fd906155bfdc8e750}{BlockchainController}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_blockchain}{Blockchain}}\ blockchain;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\ \&publicKeys;\ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_blockchain_controller_a8a3ee20378f9f17fd906155bfdc8e750}{BlockchainController}}(\textcolor{keyword}{const}\ std::map<std::string,\ std::string>\ \&pubKeys);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blockchain_controller_a8bbe608625d0d2ef9007469c8f9b9a36}{processTransactions}}(std::vector<Transaction>\ transactions);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_blockchain_controller_a930c5cb3de01376b9dd82049217f7f50}{isBlockchainValid}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blockchain_controller_a9dc1effe2852cf2fc19f7f0a1225f270}{printBlockchain}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blockchain_controller_aff3b24b67779308aa5ece577b6921614}{saveBlockchain}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keyword}{const}\ std::string\ \&key);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blockchain_controller_a1e8ba4042faecdf37c1984e203d3a29c}{registerUser}}(\textcolor{keyword}{const}\ std::string\ \&username);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_blockchain_controller_ac9eccae966d86ddfa89f9656f9054132}{getUserBalance}}(\textcolor{keyword}{const}\ std::string\ \&username)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ saveBlockchainToFile(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_blockchain}{Blockchain}}\ \&blockchain,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keyword}{const}\ std::string\ \&key);}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

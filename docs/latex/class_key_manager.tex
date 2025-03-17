@@ -1,0 +1,92 @@
+\doxysection{Класс Key\+Manager}
+\hypertarget{class_key_manager}{}\label{class_key_manager}\index{KeyManager@{KeyManager}}
+
+
+Класс для управления RSA-\/ключами пользователей.  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Key\+Manager.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_key_manager_a868028762a30f90b5702f0f4efb35d5c}{Key\+Manager}} (const std\+::vector$<$ std\+::string $>$ \&users)
+\item 
+void \mbox{\hyperlink{class_key_manager_ac6740da790b0f50f419d3b5217a8192b}{add\+User\+Keys}} (const std\+::string \&username)
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \& \mbox{\hyperlink{class_key_manager_ab35df9bb6514da5b4854fe43657c5b25}{get\+Public\+Keys}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_key_manager_ab4d52abf06c3f3eb0e42fb5ae812153e}{truncate\+Key}} (const std\+::string \&key, int head\+Len=150, int tail\+Len=150)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления RSA-\/ключами пользователей. 
+
+Класс \doxylink{class_key_manager}{Key\+Manager} предназначен для управления RSA-\/ключами пользователей. Он позволяет генерировать, сохранять и предоставлять доступ к публичным ключам Приватный ключ сохраняется в формате PEM и удаляется из памяти. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_key_manager_a868028762a30f90b5702f0f4efb35d5c}\index{KeyManager@{KeyManager}!KeyManager@{KeyManager}}
+\index{KeyManager@{KeyManager}!KeyManager@{KeyManager}}
+\doxysubsubsection{\texorpdfstring{KeyManager()}{KeyManager()}}
+{\footnotesize\ttfamily \label{class_key_manager_a868028762a30f90b5702f0f4efb35d5c} 
+Key\+Manager\+::\+Key\+Manager (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{users}{}\end{DoxyParamCaption})}
+
+Конструктор класса \doxylink{class_key_manager}{Key\+Manager}. Генерирует и сохраняет ключи для каждого пользователя из списка. 
+\begin{DoxyParams}{Аргументы}
+{\em users} & Список пользователей, для которых нужно сгенерировать ключи. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_key_manager_ac6740da790b0f50f419d3b5217a8192b}\index{KeyManager@{KeyManager}!addUserKeys@{addUserKeys}}
+\index{addUserKeys@{addUserKeys}!KeyManager@{KeyManager}}
+\doxysubsubsection{\texorpdfstring{addUserKeys()}{addUserKeys()}}
+{\footnotesize\ttfamily \label{class_key_manager_ac6740da790b0f50f419d3b5217a8192b} 
+void Key\+Manager\+::add\+User\+Keys (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{}\end{DoxyParamCaption})}
+
+Добавляет ключи для нового пользователя. 
+\begin{DoxyParams}{Аргументы}
+{\em username} & Имя пользователя. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если пользователь уже существует. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_key_manager_ab35df9bb6514da5b4854fe43657c5b25}\index{KeyManager@{KeyManager}!getPublicKeys@{getPublicKeys}}
+\index{getPublicKeys@{getPublicKeys}!KeyManager@{KeyManager}}
+\doxysubsubsection{\texorpdfstring{getPublicKeys()}{getPublicKeys()}}
+{\footnotesize\ttfamily \label{class_key_manager_ab35df9bb6514da5b4854fe43657c5b25} 
+std\+::map$<$ std\+::string, std\+::string $>$ \& Key\+Manager\+::get\+Public\+Keys (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Возвращает карту публичных ключей. \begin{DoxyReturn}{Возвращает}
+Ссылка на карту публичных ключей. 
+\end{DoxyReturn}
+\Hypertarget{class_key_manager_ab4d52abf06c3f3eb0e42fb5ae812153e}\index{KeyManager@{KeyManager}!truncateKey@{truncateKey}}
+\index{truncateKey@{truncateKey}!KeyManager@{KeyManager}}
+\doxysubsubsection{\texorpdfstring{truncateKey()}{truncateKey()}}
+{\footnotesize\ttfamily \label{class_key_manager_ab4d52abf06c3f3eb0e42fb5ae812153e} 
+std\+::string Key\+Manager\+::truncate\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int}]{head\+Len}{ = {\ttfamily 150}, }\item[{int}]{tail\+Len}{ = {\ttfamily 150}}\end{DoxyParamCaption})}
+
+Укорачивает строку ключа, оставляя только начало и конец. 
+\begin{DoxyParams}{Аргументы}
+{\em key} & Исходный ключ. \\
+\hline
+{\em head\+Len} & Длина начала строки (по умолчанию 150 символов). \\
+\hline
+{\em tail\+Len} & Длина конца строки (по умолчанию 150 символов). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Укороченная строка ключа. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Key\+Manager.\+h\end{DoxyCompactItemize}

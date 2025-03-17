@@ -1,0 +1,141 @@
+\doxysection{Класс Transaction}
+\hypertarget{class_transaction}{}\label{class_transaction}\index{Transaction@{Transaction}}
+
+
+Класс, представляющий криптографически защищенную транзакцию блокчейна  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Transaction.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transaction_ac2a6e8a77cf8011f939cf9e3e05925a5}{Transaction}} (const std\+::string \&from, const std\+::string \&to, double value, const std\+::string \&meta="{}"{})
+\begin{DoxyCompactList}\small\item\em Создает транзакцию с базовой валидацией полей \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transaction_a95c97cdcc0b37e148eaa0ae02a2c98bc}{sign\+Transaction}} (const std\+::string \&private\+Key\+PEM)
+\begin{DoxyCompactList}\small\item\em Выполняет криптографическое подписание транзакции \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_transaction_a63a280856abbd38ffb5e679f35e3a932}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Сериализует транзакцию в читаемый формат \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_aba00e1dcb4b5047114dcf8e42001a9a9}{get\+Tx\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Группа методов только для чтения (поля защищены от прямой модификации) \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca}\label{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca} 
+const std\+::string \& {\bfseries get\+Sender} () const
+\begin{DoxyCompactList}\small\item\em Нормализованный адрес отправителя \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_a066aa297bee88c83619a863681170076}\label{class_transaction_a066aa297bee88c83619a863681170076} 
+const std\+::string \& {\bfseries get\+Signature} () const
+\begin{DoxyCompactList}\small\item\em Подпись в PEM или пустая строка \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_a44735ef16560ffdfdeaa43df3822b420}\label{class_transaction_a44735ef16560ffdfdeaa43df3822b420} 
+const std\+::string \& {\bfseries get\+Receiver} () const
+\begin{DoxyCompactList}\small\item\em Нормализованный адрес получателя \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_a3ead6640530a1238516b004325d457f9}\label{class_transaction_a3ead6640530a1238516b004325d457f9} 
+const std\+::string \& {\bfseries get\+Timestamp} () const
+\begin{DoxyCompactList}\small\item\em Временная метка создания транзакции \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_a10e4e0809bfbce325871041f81148951}\label{class_transaction_a10e4e0809bfbce325871041f81148951} 
+const std\+::string \& {\bfseries get\+Metadata} () const
+\begin{DoxyCompactList}\small\item\em Метаданные (обрезанная версия) \end{DoxyCompactList}\item 
+\Hypertarget{class_transaction_a82c5d600cfed0e98c66e5c01ae280229}\label{class_transaction_a82c5d600cfed0e98c66e5c01ae280229} 
+const double \& {\bfseries get\+Amount} () const
+\begin{DoxyCompactList}\small\item\em Фактически сохраненная сумма \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Подробное описание}
+Класс, представляющий криптографически защищенную транзакцию блокчейна 
+
+Инкапсулирует логику валидации входных данных, генерации цифровой подписи и сериализации транзакции. Все операции выполняют предварительные проверки целостности данных. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_transaction_ac2a6e8a77cf8011f939cf9e3e05925a5}\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily \label{class_transaction_ac2a6e8a77cf8011f939cf9e3e05925a5} 
+Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{from}{, }\item[{const std\+::string \&}]{to}{, }\item[{double}]{value}{, }\item[{const std\+::string \&}]{meta}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Создает транзакцию с базовой валидацией полей 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em from} & Адрес отправителя (только валидные Base58\+Check-\/адреса) \\
+\hline
+{\em to} & Адрес получателя (аналогично from) \\
+\hline
+{\em value} & Положительная сумма перевода (\texorpdfstring{$<$}{<}=0 инициализирует 0) \\
+\hline
+{\em meta} & Метаданные (обрезаются до 512 символов, могут быть пустыми) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em implicit} & неявная инициализация невалидных полей пустыми значениями/нулем \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Заметки}
+Автоматически генерирует tx\+Id и timestamp через \doxylink{class_crypto_utils}{Crypto\+Utils} и \doxylink{class_time_utils}{Time\+Utils} 
+\end{DoxyNote}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_transaction_aba00e1dcb4b5047114dcf8e42001a9a9}\index{Transaction@{Transaction}!getTxId@{getTxId}}
+\index{getTxId@{getTxId}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getTxId()}{getTxId()}}
+{\footnotesize\ttfamily \label{class_transaction_aba00e1dcb4b5047114dcf8e42001a9a9} 
+const std\+::string \& Transaction\+::get\+Tx\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Группа методов только для чтения (поля защищены от прямой модификации) 
+
+Хеш-\/идентификатор транзакции \Hypertarget{class_transaction_a95c97cdcc0b37e148eaa0ae02a2c98bc}\index{Transaction@{Transaction}!signTransaction@{signTransaction}}
+\index{signTransaction@{signTransaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{signTransaction()}{signTransaction()}}
+{\footnotesize\ttfamily \label{class_transaction_a95c97cdcc0b37e148eaa0ae02a2c98bc} 
+void Transaction\+::sign\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{private\+Key\+PEM}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет криптографическое подписание транзакции 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em private\+Key\+PEM} & Приватный ключ в PEM-\/формате с заголовками \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & При\+: повторном подписании, невалидных полях транзакции, ошибках криптографических операций, несоответствии формата ключа \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Заметки}
+Логирует процесс через \doxylink{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b}{Console\+UI\+::print\+Info}. Требует предварительной инициализации всех полей транзакции (кроме signature) 
+\end{DoxyNote}
+\Hypertarget{class_transaction_a63a280856abbd38ffb5e679f35e3a932}\index{Transaction@{Transaction}!toString@{toString}}
+\index{toString@{toString}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_transaction_a63a280856abbd38ffb5e679f35e3a932} 
+std\+::string Transaction\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Сериализует транзакцию в читаемый формат 
+
+\begin{DoxyReturn}{Возвращает}
+Строка вида "{}tx\+Id\+: ..., From\+: ..., To\+: ..., Amount\+: X.\+XXXX, ..."{} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Заметки}
+Включает все поля кроме подписи. Для подписи использует \doxylink{class_transaction_a066aa297bee88c83619a863681170076}{get\+Signature()} 
+\end{DoxyNote}
+\begin{DoxyWarning}{Предупреждения}
+Формат вывода может меняться 
+\end{DoxyWarning}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Transaction.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>base-blockchain-transaction-system: Класс KeyManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">base-blockchain-transaction-system
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_key_manager.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_key_manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс KeyManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для управления RSA-ключами пользователей.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_b_c___key_manager_8h_source.html">BC_KeyManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a868028762a30f90b5702f0f4efb35d5c" id="r_a868028762a30f90b5702f0f4efb35d5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868028762a30f90b5702f0f4efb35d5c">KeyManager</a> (const std::vector&lt; std::string &gt; &amp;users)</td></tr>
+<tr class="separator:a868028762a30f90b5702f0f4efb35d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6740da790b0f50f419d3b5217a8192b" id="r_ac6740da790b0f50f419d3b5217a8192b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6740da790b0f50f419d3b5217a8192b">addUserKeys</a> (const std::string &amp;username)</td></tr>
+<tr class="separator:ac6740da790b0f50f419d3b5217a8192b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35df9bb6514da5b4854fe43657c5b25" id="r_ab35df9bb6514da5b4854fe43657c5b25"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab35df9bb6514da5b4854fe43657c5b25">getPublicKeys</a> ()</td></tr>
+<tr class="separator:ab35df9bb6514da5b4854fe43657c5b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d52abf06c3f3eb0e42fb5ae812153e" id="r_ab4d52abf06c3f3eb0e42fb5ae812153e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d52abf06c3f3eb0e42fb5ae812153e">truncateKey</a> (const std::string &amp;key, int headLen=150, int tailLen=150)</td></tr>
+<tr class="separator:ab4d52abf06c3f3eb0e42fb5ae812153e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для управления RSA-ключами пользователей. </p>
+<p>Класс <a class="el" href="class_key_manager.html" title="Класс для управления RSA-ключами пользователей.">KeyManager</a> предназначен для управления RSA-ключами пользователей. Он позволяет генерировать, сохранять и предоставлять доступ к публичным ключам Приватный ключ сохраняется в формате PEM и удаляется из памяти. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a868028762a30f90b5702f0f4efb35d5c" name="a868028762a30f90b5702f0f4efb35d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868028762a30f90b5702f0f4efb35d5c">&#9670;&#160;</a></span>KeyManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyManager::KeyManager </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>users</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор класса <a class="el" href="class_key_manager.html" title="Класс для управления RSA-ключами пользователей.">KeyManager</a>. Генерирует и сохраняет ключи для каждого пользователя из списка. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users</td><td>Список пользователей, для которых нужно сгенерировать ключи. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac6740da790b0f50f419d3b5217a8192b" name="ac6740da790b0f50f419d3b5217a8192b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6740da790b0f50f419d3b5217a8192b">&#9670;&#160;</a></span>addUserKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KeyManager::addUserKeys </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Добавляет ключи для нового пользователя. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Если пользователь уже существует. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab35df9bb6514da5b4854fe43657c5b25" name="ab35df9bb6514da5b4854fe43657c5b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35df9bb6514da5b4854fe43657c5b25">&#9670;&#160;</a></span>getPublicKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, std::string &gt; &amp; KeyManager::getPublicKeys </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Возвращает карту публичных ключей. </p><dl class="section return"><dt>Возвращает</dt><dd>Ссылка на карту публичных ключей. </dd></dl>
+
+</div>
+</div>
+<a id="ab4d52abf06c3f3eb0e42fb5ae812153e" name="ab4d52abf06c3f3eb0e42fb5ae812153e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d52abf06c3f3eb0e42fb5ae812153e">&#9670;&#160;</a></span>truncateKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string KeyManager::truncateKey </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>headLen</em></span><span class="paramdefsep"> = </span><span class="paramdefval">150</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tailLen</em></span><span class="paramdefsep"> = </span><span class="paramdefval">150</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Укорачивает строку ключа, оставляя только начало и конец. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Исходный ключ. </td></tr>
+    <tr><td class="paramname">headLen</td><td>Длина начала строки (по умолчанию 150 символов). </td></tr>
+    <tr><td class="paramname">tailLen</td><td>Длина конца строки (по умолчанию 150 символов). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Укороченная строка ключа. </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="_b_c___key_manager_8h_source.html">BC_KeyManager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_key_manager.html">KeyManager</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

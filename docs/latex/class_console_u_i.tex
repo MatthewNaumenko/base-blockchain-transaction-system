@@ -1,0 +1,220 @@
+\doxysection{Класс Console\+UI}
+\hypertarget{class_console_u_i}{}\label{class_console_u_i}\index{ConsoleUI@{ConsoleUI}}
+
+
+Класс для работы с консольным интерфейсом системы  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Utilities.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_console_u_i_a515db1dcf6506fe139515c28c5a87eef}{print\+Banner}} ()
+\begin{DoxyCompactList}\small\item\em Выводит главный баннер системы \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a9c8d23b588f011c796d115b02a119119}{print\+Header}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Выводит заголовок раздела с цветовым оформлением \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a32eda42b8d1783c82d772f1880a02cb5}{print\+Section\+Header}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Выводит подзаголовок секции \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a34aa561bb134518d1d919778118cc132}{print\+Default}} (const std\+::string \&title, bool new\+Line=true)
+\begin{DoxyCompactList}\small\item\em Выводит стандартное сообщение \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a9aea242346968ea28a95d22575202906}{print\+Mining}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Выводит сообщение о процессе майнинга \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_ad009f475f0a7103d4e3f1721dddcba71}{print\+Success}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Выводит сообщение об успешной операции \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a988af88a58ef9103c08c78729e5ecf7f}{print\+Error}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Выводит сообщение об ошибке \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a73be4efc6ab5df285a52beb8c7f15785}{print\+Warning}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Выводит предупреждение \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b}{print\+Info}} (const std\+::string \&message, bool new\+Line=true)
+\begin{DoxyCompactList}\small\item\em Выводит информационное сообщение \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_ad8d159da55e795e658f13599deac2ee2}{print\+Divider}} (char symbol=\textquotesingle{}-\/\textquotesingle{}, int length=60)
+\begin{DoxyCompactList}\small\item\em Рисует горизонтальный разделитель \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a898e68c84983224f87bbeea32290f84d}{print\+Menu\+Options}} (const std\+::vector$<$ std\+::string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Выводит пункты меню \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с консольным интерфейсом системы 
+
+Предоставляет методы для форматированного вывода информации\+:
+\begin{DoxyItemize}
+\item Заголовки и баннеры
+\item Цветовые стили для разных типов сообщений
+\item Элементы пользовательского интерфейса 
+\end{DoxyItemize}
+
+\doxysubsection{Методы}
+\Hypertarget{class_console_u_i_a515db1dcf6506fe139515c28c5a87eef}\index{ConsoleUI@{ConsoleUI}!printBanner@{printBanner}}
+\index{printBanner@{printBanner}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printBanner()}{printBanner()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a515db1dcf6506fe139515c28c5a87eef} 
+static void Console\+UI\+::print\+Banner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит главный баннер системы 
+
+Содержит информацию о версии, авторе и возможностях системы. Использует псевдографику для визуального оформления. \Hypertarget{class_console_u_i_a34aa561bb134518d1d919778118cc132}\index{ConsoleUI@{ConsoleUI}!printDefault@{printDefault}}
+\index{printDefault@{printDefault}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printDefault()}{printDefault()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a34aa561bb134518d1d919778118cc132} 
+static void Console\+UI\+::print\+Default (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{, }\item[{bool}]{new\+Line}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит стандартное сообщение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения \\
+\hline
+{\em new\+Line} & Добавлять перевод строки после сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_ad8d159da55e795e658f13599deac2ee2}\index{ConsoleUI@{ConsoleUI}!printDivider@{printDivider}}
+\index{printDivider@{printDivider}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printDivider()}{printDivider()}}
+{\footnotesize\ttfamily \label{class_console_u_i_ad8d159da55e795e658f13599deac2ee2} 
+static void Console\+UI\+::print\+Divider (\begin{DoxyParamCaption}\item[{char}]{symbol}{ = {\ttfamily \textquotesingle{}-\/\textquotesingle{}}, }\item[{int}]{length}{ = {\ttfamily 60}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Рисует горизонтальный разделитель 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em symbol} & Символ для заполнения линии \\
+\hline
+{\em length} & Длина разделителя в символах \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a988af88a58ef9103c08c78729e5ecf7f}\index{ConsoleUI@{ConsoleUI}!printError@{printError}}
+\index{printError@{printError}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printError()}{printError()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a988af88a58ef9103c08c78729e5ecf7f} 
+static void Console\+UI\+::print\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит сообщение об ошибке 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст описания ошибки \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a9c8d23b588f011c796d115b02a119119}\index{ConsoleUI@{ConsoleUI}!printHeader@{printHeader}}
+\index{printHeader@{printHeader}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printHeader()}{printHeader()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a9c8d23b588f011c796d115b02a119119} 
+static void Console\+UI\+::print\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит заголовок раздела с цветовым оформлением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em title} & Текст заголовка \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b}\index{ConsoleUI@{ConsoleUI}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b} 
+static void Console\+UI\+::print\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{, }\item[{bool}]{new\+Line}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит информационное сообщение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст информации \\
+\hline
+{\em new\+Line} & Добавлять перевод строки после сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a898e68c84983224f87bbeea32290f84d}\index{ConsoleUI@{ConsoleUI}!printMenuOptions@{printMenuOptions}}
+\index{printMenuOptions@{printMenuOptions}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printMenuOptions()}{printMenuOptions()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a898e68c84983224f87bbeea32290f84d} 
+static void Console\+UI\+::print\+Menu\+Options (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит пункты меню 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em options} & Список текстовых пунктов меню \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a9aea242346968ea28a95d22575202906}\index{ConsoleUI@{ConsoleUI}!printMining@{printMining}}
+\index{printMining@{printMining}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printMining()}{printMining()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a9aea242346968ea28a95d22575202906} 
+static void Console\+UI\+::print\+Mining (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит сообщение о процессе майнинга 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст сообщения с техническими деталями \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a32eda42b8d1783c82d772f1880a02cb5}\index{ConsoleUI@{ConsoleUI}!printSectionHeader@{printSectionHeader}}
+\index{printSectionHeader@{printSectionHeader}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printSectionHeader()}{printSectionHeader()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a32eda42b8d1783c82d772f1880a02cb5} 
+static void Console\+UI\+::print\+Section\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит подзаголовок секции 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em title} & Текст подзаголовка в формате "{}=== Текст ==="{} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_ad009f475f0a7103d4e3f1721dddcba71}\index{ConsoleUI@{ConsoleUI}!printSuccess@{printSuccess}}
+\index{printSuccess@{printSuccess}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printSuccess()}{printSuccess()}}
+{\footnotesize\ttfamily \label{class_console_u_i_ad009f475f0a7103d4e3f1721dddcba71} 
+static void Console\+UI\+::print\+Success (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит сообщение об успешной операции 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст подтверждения успеха \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a73be4efc6ab5df285a52beb8c7f15785}\index{ConsoleUI@{ConsoleUI}!printWarning@{printWarning}}
+\index{printWarning@{printWarning}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printWarning()}{printWarning()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a73be4efc6ab5df285a52beb8c7f15785} 
+static void Console\+UI\+::print\+Warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выводит предупреждение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & Текст предупреждения \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Utilities.\+h\end{DoxyCompactItemize}

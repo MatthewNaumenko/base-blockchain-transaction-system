@@ -1,0 +1,59 @@
+\doxysection{BC\+\_\+\+Utilities.\+h}
+\hypertarget{_b_c___utilities_8h_source}{}\label{_b_c___utilities_8h_source}\index{include/BC\_Utilities.h@{include/BC\_Utilities.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ BC\_Utilities.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Системные\ библиотеки}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_console_u_i}{ConsoleUI}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a515db1dcf6506fe139515c28c5a87eef}{printBanner}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a9c8d23b588f011c796d115b02a119119}{printHeader}}(\textcolor{keyword}{const}\ std::string\ \&title);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a32eda42b8d1783c82d772f1880a02cb5}{printSectionHeader}}(\textcolor{keyword}{const}\ std::string\ \&title);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a34aa561bb134518d1d919778118cc132}{printDefault}}(\textcolor{keyword}{const}\ std::string\ \&title,\ \textcolor{keywordtype}{bool}\ newLine\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a9aea242346968ea28a95d22575202906}{printMining}}(\textcolor{keyword}{const}\ std::string\ \&title);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_ad009f475f0a7103d4e3f1721dddcba71}{printSuccess}}(\textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00057\ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a988af88a58ef9103c08c78729e5ecf7f}{printError}}(\textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a73be4efc6ab5df285a52beb8c7f15785}{printWarning}}(\textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b}{printInfo}}(\textcolor{keyword}{const}\ std::string\ \&message,\ \textcolor{keywordtype}{bool}\ newLine\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_ad8d159da55e795e658f13599deac2ee2}{printDivider}}(\textcolor{keywordtype}{char}\ symbol\ =\ \textcolor{charliteral}{'-\/'},\ \textcolor{keywordtype}{int}\ length\ =\ 60);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_u_i_a898e68c84983224f87bbeea32290f84d}{printMenuOptions}}(\textcolor{keyword}{const}\ std::vector<std::string>\ \&options);}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_time_utils}{TimeUtils}}}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_time_utils_a9c93bbb9a58d7b5916a22eac6f739cac}{getCurrentTime}}();}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_validator}{Validator}}}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_validator_af81c9b16dd5bb4563ef314a5346ef71d}{isAddressFormatValid}}(\textcolor{keyword}{const}\ std::string\ \&address);}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_persistence_manager}{PersistenceManager}}}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_persistence_manager_ab6dc8de1858e41c9e27453097a93affb}{encryptString}}(\textcolor{keyword}{const}\ std::string\ \&plaintext,\ \textcolor{keyword}{const}\ std::string\ \&key);}
+\DoxyCodeLine{00146\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,49 @@
+\doxysection{Класс Validator}
+\hypertarget{class_validator}{}\label{class_validator}\index{Validator@{Validator}}
+
+
+Класс для валидации входных данных  
+
+
+
+
+{\ttfamily \#include $<$BC\+\_\+\+Utilities.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_validator_af81c9b16dd5bb4563ef314a5346ef71d}{is\+Address\+Format\+Valid}} (const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Проверяет корректность формата блокчейн-\/адреса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для валидации входных данных 
+
+\doxysubsection{Методы}
+\Hypertarget{class_validator_af81c9b16dd5bb4563ef314a5346ef71d}\index{Validator@{Validator}!isAddressFormatValid@{isAddressFormatValid}}
+\index{isAddressFormatValid@{isAddressFormatValid}!Validator@{Validator}}
+\doxysubsubsection{\texorpdfstring{isAddressFormatValid()}{isAddressFormatValid()}}
+{\footnotesize\ttfamily \label{class_validator_af81c9b16dd5bb4563ef314a5346ef71d} 
+static bool Validator\+::is\+Address\+Format\+Valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет корректность формата блокчейн-\/адреса 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em address} & Адрес для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ адрес соответствует требованиям\+:
+\begin{DoxyItemize}
+\item Длина 3-\/20 символов
+\item Только буквы(без кириллицы), цифры и подчеркивание 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/BC\+\_\+\+Utilities.\+h\end{DoxyCompactItemize}
