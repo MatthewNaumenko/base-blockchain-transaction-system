@@ -98,7 +98,6 @@ Blockchain System Menu
 1. **Онлайн-версия**: [GitHub Pages](https://matthewnaumenko.github.io/base-blockchain-transaction-system/)
 2. **Локальная генерация**:
    ```bash
-   # Сгенерируйте документацию
    doxygen Doxyfile
    ```
 
