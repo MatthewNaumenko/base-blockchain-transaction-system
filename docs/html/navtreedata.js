@@ -24,12 +24,24 @@
 */
 var NAVTREE =
 [
-  [ "base-blockchain-transaction-system", "index.html", ]
+  [ "base-blockchain-transaction-system", "index.html", [
+    [ "Классы", "annotated.html", [
+      [ "Классы", "annotated.html", "annotated_dup" ],
+      [ "Алфавитный указатель классов", "classes.html", null ],
+      [ "Члены классов", "functions.html", [
+        [ "Указатель", "functions.html", null ],
+        [ "Функции", "functions_func.html", null ]
+      ] ]
+    ] ],
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_b_c___block_8h_source.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

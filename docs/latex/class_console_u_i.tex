@@ -33,7 +33,9 @@ static void \mbox{\hyperlink{class_console_u_i_a144c4d735ef468fdeb6bc6715c022f8b
 static void \mbox{\hyperlink{class_console_u_i_ad8d159da55e795e658f13599deac2ee2}{print\+Divider}} (char symbol=\textquotesingle{}-\/\textquotesingle{}, int length=60)
 \begin{DoxyCompactList}\small\item\em Рисует горизонтальный разделитель \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_console_u_i_a898e68c84983224f87bbeea32290f84d}{print\+Menu\+Options}} (const std\+::vector$<$ std\+::string $>$ \&options)
-\begin{DoxyCompactList}\small\item\em Выводит пункты меню \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Выводит пункты меню \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_console_u_i_a8dd3e8df0105ce518ca17c48ad2cbd36}{print\+Menu}} (std\+::string \&user)
+\begin{DoxyCompactList}\small\item\em Отображает главное меню системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
@@ -136,6 +138,21 @@ static void Console\+UI\+::print\+Info (\begin{DoxyParamCaption}\item[{const std
 {\em message} & Текст информации \\
 \hline
 {\em new\+Line} & Добавлять перевод строки после сообщения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_console_u_i_a8dd3e8df0105ce518ca17c48ad2cbd36}\index{ConsoleUI@{ConsoleUI}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!ConsoleUI@{ConsoleUI}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily \label{class_console_u_i_a8dd3e8df0105ce518ca17c48ad2cbd36} 
+static void Console\+UI\+::print\+Menu (\begin{DoxyParamCaption}\item[{std\+::string \&}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отображает главное меню системы. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em user} & Имя текущего пользователя. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_console_u_i_a898e68c84983224f87bbeea32290f84d}\index{ConsoleUI@{ConsoleUI}!printMenuOptions@{printMenuOptions}}
