@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <filesystem>
+#include <cstring>
 
 // OpenSSL компоненты
 #include <openssl/evp.h>
